@@ -11,7 +11,7 @@
 			</div>
 			<div class="col-lg-6 col-md-10 ">
 				<div class="appoinment-wrap mt-5 mt-lg-0">
-					<h2 class="mb-2 title-color">Umów wizytę</h2>
+					<h2 class="mb-2 title-color" id="umow-wizyte">Umów wizytę</h2>
 					<p class="mb-4">Mollitia dicta commodi est recusandae iste, natus eum asperiores corrupti qui velit . Iste dolorum atque similique praesentium soluta.</p>
 					<form class="appoinment-form" method="POST" action="https://formspree.io/f/xzbozwnl?language=pl">
                     <div class="row">
@@ -26,13 +26,13 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+<!--                         <div class="col-lg-6">
                             <div class="form-group">
                                 <select class="form-control" name="specjalista">
                                   <option value="" disabled selected hidden>Specjalista</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
 
                          <div class="col-lg-6">
                             <div class="form-group">
@@ -40,12 +40,13 @@
                                 <input name="data" id="date" type="date" class="form-control" placeholder="Data" required>
                             </div>
                         </div>
-
+<!--
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <input name="godzina" id="time" type="text" class="form-control" placeholder="Godzina">
                             </div>
-                        </div>
+                        </div> -->
+
                          <div class="col-lg-6">
                             <div class="form-group">
                                 <input name="imie" id="name" type="text" class="form-control" placeholder="Imię i Nazwisko">
@@ -62,7 +63,7 @@
                         <textarea name="wiadomosc" id="message" class="form-control" rows="6" placeholder="Wiadomość"></textarea>
                     </div>
 
-                    <input type="submit" class="btn btn-main btn-round-full" href="appoinment.html" value="Wyślij" />
+                    <input type="submit" class="btn btn-main btn-round-full" value="Wyślij" />
                 </form>
             </div>
 			</div>

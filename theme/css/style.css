@@ -605,9 +605,9 @@ a:focus {
   position: absolute;
   content: "";
   right: 10px;
-  bottom: 20px;
+  bottom: 10px;
   background: #0379C1;
-  padding: 48px;
+  padding: 18px;
 }
 .appoinment-content .emergency h2 {
   color: #fff;

@@ -33,46 +33,6 @@
 		autoplaySpeed: 2000
 	});
 
-	$('.clients-logo').slick({
-		infinite: true,
-		arrows: false,
-		autoplay: true,
-		slidesToShow: 6,
-		slidesToScroll: 6,
-		autoplaySpeed: 6000,
-		responsive: [{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 6,
-					slidesToScroll: 6,
-					infinite: true,
-					dots: true
-				}
-			},
-			{
-				breakpoint: 900,
-				settings: {
-					slidesToShow: 4,
-					slidesToScroll: 4
-				}
-			}, {
-				breakpoint: 600,
-				settings: {
-					slidesToShow: 4,
-					slidesToScroll: 4
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2
-				}
-			}
-
-		]
-	});
-
 	$('.testimonial-wrap').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,

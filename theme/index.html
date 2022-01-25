@@ -82,7 +82,16 @@
 
 			<div class="collapse navbar-collapse" id="navbarmain">
 				<ul class="navbar-nav ml-auto">
-					<!-- <li class="nav-item active"><a class="nav-link" href="index.html">Strona Główna</a></li> -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="department.html" id="dropdown02" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Poradnie NFZ <i class="icofont-thin-down"></i></a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown02">
+							<li><a class="dropdown-item" href="poradnia-otolaryngologiczna.html">Poradnia Otorynolaryngologiczna</a></li>
+							<li><a class="dropdown-item" href="poradnia-chirurgii.html">Poradnia Chirurgii Ogólnej</a></li>
+							<li><a class="dropdown-item" href="poradnia-onkologiczna.html">Poradnia Onkologiczna</a></li>
+							<li><a class="dropdown-item" href="poradnia-logopedyczna.html">Poradnia Logopedyczna</a></li>
+						</ul>
+					</li>
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="service.html" id="dropdown01" data-toggle="dropdown"
@@ -97,16 +106,6 @@
 						</ul>
 					</li>
 
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="department.html" id="dropdown02" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">Poradnie NFZ <i class="icofont-thin-down"></i></a>
-						<ul class="dropdown-menu" aria-labelledby="dropdown02">
-							<li><a class="dropdown-item" href="department.html">Poradnia Otorynolaryngologiczna</a></li>
-							<li><a class="dropdown-item" href="department-single.html">Poradnia Chirurgii Ogólnej</a></li>
-							<li><a class="dropdown-item" href="department-single.html">Poradnia Onkologiczna</a></li>
-							<li><a class="dropdown-item" href="department-single.html">Poradnia Logopedyczna</a></li>
-						</ul>
-					</li>
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="doctor.html" id="dropdown03" data-toggle="dropdown"
@@ -139,7 +138,7 @@
 					
 					<p class="mb-4 pr-5">Specjalizujemy się w leczeniu pajączków żylnych oraz żylaków kończyn dolnych metodą mikrochirurgiczną, zmodyfikowaną i udoskonaloną przez dra&nbsp;Andrzeja&nbsp;Kompfa, który był założycielem naszego ośrodka.</p>
 					<div class="btn-container ">
-						<a href="appoinment.html" target="_blank" class="btn btn-main-2 btn-icon btn-round-full">Umów wizytę <i class="icofont-simple-right ml-2  "></i></a>
+						<a href="#umow-wizyte" class="btn btn-main-2 btn-icon btn-round-full">Umów wizytę <i class="icofont-simple-right ml-2  "></i></a>
 					</div>
 				</div>
 			</div>
@@ -159,7 +158,7 @@
 						<span>Obsługa 24/7</span>
 						<h4 class="mb-3">Rejestracja Online</h4>
 						<p class="mb-4">Umów wizytę przez internet.</p>
-						<a href="appoinment.html" class="btn btn-main btn-round-full">Umów wizytę</a>
+						<a href="/#umow-wizyte" class="btn btn-main btn-round-full">Umów wizytę</a>
 					</div>
 				
 					<div class="feature-item mb-5 mb-lg-0">
@@ -361,7 +360,7 @@
 			</div>
 			<div class="col-lg-6 col-md-10 ">
 				<div class="appoinment-wrap mt-5 mt-lg-0">
-					<h2 class="mb-2 title-color">Umów wizytę</h2>
+					<h2 class="mb-2 title-color" id="umow-wizyte">Umów wizytę</h2>
 					<p class="mb-4">Mollitia dicta commodi est recusandae iste, natus eum asperiores corrupti qui velit . Iste dolorum atque similique praesentium soluta.</p>
 					<form class="appoinment-form" method="POST" action="https://formspree.io/f/xzbozwnl?language=pl">
                     <div class="row">
@@ -376,13 +375,13 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+<!--                         <div class="col-lg-6">
                             <div class="form-group">
                                 <select class="form-control" name="specjalista">
                                   <option value="" disabled selected hidden>Specjalista</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
 
                          <div class="col-lg-6">
                             <div class="form-group">
@@ -390,12 +389,13 @@
                                 <input name="data" id="date" type="date" class="form-control" placeholder="Data" required>
                             </div>
                         </div>
-
+<!--
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <input name="godzina" id="time" type="text" class="form-control" placeholder="Godzina">
                             </div>
-                        </div>
+                        </div> -->
+
                          <div class="col-lg-6">
                             <div class="form-group">
                                 <input name="imie" id="name" type="text" class="form-control" placeholder="Imię i Nazwisko">
@@ -412,7 +412,7 @@
                         <textarea name="wiadomosc" id="message" class="form-control" rows="6" placeholder="Wiadomość"></textarea>
                     </div>
 
-                    <input type="submit" class="btn btn-main btn-round-full" href="appoinment.html" value="Wyślij" />
+                    <input type="submit" class="btn btn-main btn-round-full" value="Wyślij" />
                 </form>
             </div>
 			</div>
@@ -541,26 +541,6 @@
 			<div class="col-lg-2">
 				<div class="client-thumb">
 					<img src="images/about/2.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/3.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/4.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/5.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/6.png" alt="" class="img-fluid">
 				</div>
 			</div>
 			<div class="col-lg-2">
