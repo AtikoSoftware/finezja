@@ -179,7 +179,7 @@ input[type="email"],input[type="password"],input[type="text"],input[type="tel"]{
 
 //  Section Title
 .section {
-  padding:100px 0;
+  padding: 20px 0;
 }
 .section-sm {
   padding:70px 0;
@@ -336,4 +336,8 @@ a:focus {
   .text-lg{
     font-size: 28px;
   }
+}
+
+.department-content {
+  text-align: justify;
 }

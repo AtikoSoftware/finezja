@@ -1,0 +1,34 @@
+@@include('header.htm')
+@@include('blocks/navigation.htm')
+@@include('blocks/page-title.htm', {
+"title": "Cennik",
+"description": ""
+})
+
+<section class="section department-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-11">
+        <div class="department-content mt-5">
+          <h3 class="mt-5 mb-4">Cennik</h3>
+          <div class="divider my-4"></div>
+          <ul class="list-unstyled department-service">
+            <li><i class="icofont-info-circle mr-2"></i>Wizyta diagnostyczna obejmująca pełne badanie dopplerowskie oraz specjalistyczną konsultację: 200 PLN</li>
+            <li><i class="icofont-info-circle mr-2"></i>USG-Doppler żył kończyn dolnych: 150 PLN</li>
+            <li><i class="icofont-info-circle mr-2"></i>Konsultacja lekarska bez badań diagnostycznych: 150 PLN</li>
+            <li><i class="icofont-info-circle mr-2"></i>Zabieg skleroterapii kompresyjnej (nieoperacyjne leczenie żylaków i pajączków): od 250 PLN</li>
+            <li><i class="icofont-info-circle mr-2"></i>Zabieg skleroterapii pod kontrolą USG – echoskleroterapia: od 500 PLN</li>
+            <li><i class="icofont-info-circle mr-2"></i>Operacja usuwania żylaków met. mikrochirurgiczną (mikroflebektomia): od 1000 do 2 500 PLN</li>
+            <li><i class="icofont-info-circle mr-2"></i>Pomiar i dobór medycznych wyrobów uciskowych- bez opłat</li>
+            <li>(cena znieczulenia zawarta jest w cenie zabiegu)</li>
+          </ul>
+
+          @@include('blocks/umow-wizyte.htm')
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('blocks/footer.htm')
+@@include('footer.htm')

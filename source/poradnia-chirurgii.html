@@ -1,0 +1,42 @@
+@@include('header.htm')
+@@include('blocks/navigation.htm')
+@@include('blocks/page-title.htm', {
+"title": "Poradnia Chirurgii Ogólnej",
+"description": ""
+})
+
+<section class="section department-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="department-content mt-5">
+          <h3 class="mt-5 mb-4">Zabiegi wykonywane w poradni to m.in.</h3>
+          <div class="divider my-4"></div>
+          <ul class="list-unstyled department-service">
+            <li><i class="icofont-check mr-2"></i>Zmiany skórne - diagnostyka, usuwanie</li>
+            <li><i class="icofont-check mr-2"></i>Guzki</li>
+            <li><i class="icofont-check mr-2"></i>Znamiona</li>
+            <li><i class="icofont-check mr-2"></i>Wrastające paznokcie</li>
+            <li><i class="icofont-check mr-2"></i>Brodawki</li>
+            <li><i class="icofont-check mr-2"></i>Kaszaki</li>
+            <li><i class="icofont-check mr-2"></i>Tłuszczaki</li>
+            <li><i class="icofont-check mr-2"></i>Odciski</li>
+            <li><i class="icofont-check mr-2"></i>Leczenie trudno gojących się ran</li>
+            <li><i class="icofont-check mr-2"></i>Kwalifikacje do zabiegów operacyjnych</li>
+            <li><i class="icofont-check mr-2"></i>Konsultacje</li>
+            <li><i class="icofont-check mr-2"></i>Zabiegi w znieczuleniu miejscowym</li>
+          </ul>
+
+          @@include('blocks/umow-wizyte.htm')
+
+          @@include('blocks/refundowane-przez-nfz.htm')
+        </div>
+      </div>
+
+      @@include('blocks/poradnia-godziny.htm')
+    </div>
+  </div>
+</section>
+
+@@include('blocks/footer.htm')
+@@include('footer.htm')
