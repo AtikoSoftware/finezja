@@ -22,7 +22,7 @@ var path = {
   },
   build: {
     dirNetlify: 'netlify/',
-    dirDev: 'theme/'
+    dirDev: 'docs/'
   }
 };
 
@@ -106,7 +106,7 @@ gulp.task('others:build', function () {
 
 // Clean Build Folder
 gulp.task('clean', function (cb) {
-  rimraf('./theme', cb);
+  rimraf('./docs', cb);
 });
 
 // Watch Task
