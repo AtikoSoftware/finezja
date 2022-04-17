@@ -167,4 +167,9 @@
 		});
 	}
 
+	const tomorrow = new Date()
+	tomorrow.setDate(tomorrow.getDate() + 1)
+	const date = tomorrow.toISOString().split('T')[0];
+	$('#date').val(date);
+
 })(jQuery);
