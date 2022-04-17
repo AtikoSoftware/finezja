@@ -7,7 +7,6 @@ const fileinclude = require('gulp-file-include');
 const autoprefixer = require('gulp-autoprefixer');
 const bs = require('browser-sync').create();
 const rimraf = require('rimraf');
-const comments = require('gulp-header-comment');
 
 var path = {
   src: {
@@ -18,7 +17,8 @@ var path = {
     plugins: 'source/plugins/**/*.*',
     js: 'source/js/*.js',
     scss: 'source/scss/**/*.scss',
-    images: 'source/images/**/*.+(png|jpg|gif|svg)'
+    images: 'source/images/**/*.+(png|jpg|gif|svg)',
+    downloads: 'source/downloads/*.*'
   },
   build: {
     dirNetlify: 'netlify/',
@@ -32,12 +32,6 @@ gulp.task('html:build', function () {
     .pipe(fileinclude({
       basepath: path.src.incdir
     }))
-    .pipe(comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `))
     .pipe(gulp.dest(path.build.dirDev))
     .pipe(bs.reload({
       stream: true
@@ -53,12 +47,6 @@ gulp.task('scss:build', function () {
     }).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('/'))
-    .pipe(comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `))
     .pipe(gulp.dest(path.build.dirDev + 'css/'))
     .pipe(bs.reload({
       stream: true
@@ -68,12 +56,6 @@ gulp.task('scss:build', function () {
 // Javascript
 gulp.task('js:build', function () {
   return gulp.src(path.src.js)
-    .pipe(comments(`
-  WEBSITE: https://themefisher.com
-  TWITTER: https://twitter.com/themefisher
-  FACEBOOK: https://www.facebook.com/themefisher
-  GITHUB: https://github.com/themefisher/
-  `))
     .pipe(gulp.dest(path.build.dirDev + 'js/'))
     .pipe(bs.reload({
       stream: true
@@ -84,6 +66,15 @@ gulp.task('js:build', function () {
 gulp.task('images:build', function () {
   return gulp.src(path.src.images)
     .pipe(gulp.dest(path.build.dirDev + 'images/'))
+    .pipe(bs.reload({
+      stream: true
+    }));
+});
+
+// Images
+gulp.task('downloads:build', function () {
+  return gulp.src(path.src.downloads)
+    .pipe(gulp.dest(path.build.dirDev + 'downloads/'))
     .pipe(bs.reload({
       stream: true
     }));
@@ -117,6 +108,7 @@ gulp.task('watch:build', function () {
   gulp.watch(path.src.js, gulp.series('js:build'));
   gulp.watch(path.src.images, gulp.series('images:build'));
   gulp.watch(path.src.plugins, gulp.series('plugins:build'));
+  gulp.watch(path.src.downloads, gulp.series('downloads:build'));
 });
 
 // Build Task
@@ -128,6 +120,7 @@ gulp.task('default', gulp.series(
   'images:build',
   'plugins:build',
   'others:build',
+  'downloads:build',
   gulp.parallel(
     'watch:build',
     function () {
