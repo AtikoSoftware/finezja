@@ -1,0 +1,49 @@
+@@include('header.htm')
+@@include('blocks/navigation.htm')
+@@include('blocks/page-title.htm', {
+"title": "Poradnia Logopedyczna",
+"description": ""
+})
+
+<section class="section department-single">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="department-content mt-5">
+          <h3 class="mt-5 mb-4">Opieka logopedyczna dla dzieci i dorosłych z zaburzeniami mowy i języka. </h3>
+          <div class="divider my-4"></div>
+
+          <div class="my-4">
+          Diagnostyka, korekcja oraz instruktaż dla rodziców (opiekunów),  zmierzające do ograniczania i likwidowania zaburzeń.
+
+          Stosujemy szerokie rozumienie pracy logopedycznej polegającej na korygowaniu zaburzeń mowy i języka w połączeniu z oddziaływaniem na pozostałe sfery rozwoju pacjenta, tj. wspomaganiem rozwoju intelektualnego, emocjonalnego, społecznego oraz fizycznego.
+          Logopedzi pracujący w naszej poradni dysponują wiedzą i doświadczeniem w pracy z następującymi zaburzeniami:
+          </div>
+          <ul class="list-unstyled department-service">
+            <li><i class="icofont-check mr-2"></i>wadami wymowy (dyslalią)</li>
+            <li><i class="icofont-check mr-2"></i>brakiem lub opóźnionym rozwojem mowy czynnej i biernej</li>
+            <li><i class="icofont-check mr-2"></i>niepłynnością mowy (jąkanie)</li>
+            <li><i class="icofont-check mr-2"></i>niedosłuchem</li>
+            <li><i class="icofont-check mr-2"></i>upośledzeniem umysłowym</li>
+            <li><i class="icofont-check mr-2"></i>autyzmem</li>
+            <li><i class="icofont-check mr-2"></i>porażeniem mózgowym</li>
+            <li><i class="icofont-check mr-2"></i>afazją</li>
+            <li><i class="icofont-check mr-2"></i>dysartrią</li>
+            <li><i class="icofont-check mr-2"></i>alalią</li>
+            <li><i class="icofont-check mr-2"></i>specyficznymi trudnościami w nauce czytania i pisania (dysleksja, dysgrafia) itp.</li>
+          </ul>
+
+          @@include('blocks/umow-wizyte.htm')
+
+          @@include('blocks/refundowane-przez-nfz.htm')
+        </div>
+      </div>
+
+      @@include('blocks/poradnia-godziny.htm')
+    </div>
+  </div>
+</section>
+
+@@include('blocks/footer.htm')
+@@include('footer.htm')
